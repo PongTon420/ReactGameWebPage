@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoshikage Kira's introduction monologue generator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kira's Curriculum Vitae Generator</title>
+    <link rel="icon" type="image/png" href="./image/favicon.png">
+    <link rel="stylesheet" href="styles.css"/>
+    <script type="module" src="utilities.js"></script>
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+  <header>
+    <section>
+      <h1 class="display-inline">Yoshikage Kira's introduction monologue generator</h1>
+      <p id="disclaimer">This is a fan-made project. All characters and images belong to Hirohiko Araki and Shueisha. Used under fair use for non-commercial educational purposes.</p>
+      <fieldset id="headerFieldset">
+        <legend>What does it do?</legend>
+        <p class="pNormal">This website generates Yoshikage Kira's iconic introduction monologue from JoJo's Bizarre Adventure: Part 4 using your custom inputs.</p>
+      </fieldset>
+    </section>
+  </header>
+  <main>
+    <section>
+      <h2>Kira&apos;s Curriculum Vitae Generator</h2>
+      <div class="generator-box">
+        <form id="generator-form">
+            <label for="name">Name:</label>
+            <input 
+            id="name" 
+            name="name" 
+            type="text"
+            placeholder="e.g. Yoshikage Kira"
+            max="100"
+            />
+          <br>
+            <label for="age">Age:</label>
+            <input 
+            id="age" 
+            name="age" 
+            type="number" 
+            placeholder="33"
+            />
+          <br>
+            <label for="house">Your house is in:</label>
+            <input 
+            id="house" 
+            name="house" 
+            type="text" 
+            placeholder="e.g. the northeast section of Morioh"
+            max="200"
+            />
+          <br>
+            <label>Are you married?:&nbsp;</label>
+            <label id="radio-yes" class="inline-block-label" for="yes-married">Yes</label>
+            <input 
+            id="yes-married" 
+            name="is-married" 
+            type="radio"
+            value="married"
+            />
+            <label id="radio-no" class="inline-block-label" for="no-married">No</label>
+            <input 
+            id="no-married" 
+            name="is-married" 
+            type="radio"
+            value="not married"
+            checked
+            />
+          <br>
+            <label for="worktitle">Your job title or position:</label>
+            <input 
+            id="worktitle" 
+            name="worktitle" 
+            type="text" 
+            placeholder="e.g. an employee"
+            max="200"
+            />
+          <br>
+            <label for="workplace">Workplace:</label>
+            <input 
+            id="workplace" 
+            name="workplace" 
+            type="text" 
+            placeholder="e.g. the Kame Yu department stores"
+            max="200"
+            />
+          <br>
+            <label class="inline-block-label-alt" for="timeGetHome">What time do you get home?:</label>
+            <select id="timeGetHome" name="timeGetHome"></select>
+          <br>
+            <label class="inline-block-label-alt" for="timeToSleep">What time do you sleep?:</label>
+            <select id="timeToSleep" name="timeToSleep"></select>
+          <br>
+            <label for="not-do">Enter something you don&apos;t do:</label>
+              <input 
+              id="not-do" 
+              name="not-do" 
+              type="text" 
+              placeholder="e.g. smoke"
+              max="200"
+              />
+          <br>
+            <label for="do">Enter something you occasionally do:</label>
+              <input 
+              id="do" 
+              name="do" 
+              type="text" 
+              placeholder="e.g. drink"
+              max="200"
+              />
+          <br>
+            <label for="wish">What do you wish for?:</label>
+              <input 
+              id="wish" 
+              name="wish" 
+              type="text" 
+              placeholder="e.g. to live a very quiet life"
+              max="200"
+              />
+          <br>
+            <label class="inline-block-label-alt" for="randomifblank"
+            title="Generate values randomly from a set list to fill in the blanks">Random if blank:</label>
+            <input
+            id="randomifblank"
+            name="randomifblank"
+            value="randomifblank"
+            type="checkbox"
+            title="Generate values randomly from a set list to fill in the blanks"
+            />
+            <small>(Generate values randomly from a set list to fill in the blanks)</small>
+          <br>
+            <label class="inline-block-label-alt" for="random-everything"
+            title="Generate all fields randomly from a set list.">Random everything:</label>
+            <input
+            id="random-everything"
+            name="random-everything"
+            value="random-everything"
+            type="checkbox"
+            title="Generate all fields randomly from a set list."
+            />
+            <small>(Generate all fields randomly from a set list)</small>
+          <br>
+          <br>
+          <div class="button-div">
+            <button id="generateButton" type="button">Generate</button>
+            <button id="translateButton" type="button">Translate</button>
+            <button type="reset">Clear all</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <fieldset class="paragraphFieldset">
+        <legend class="paragraphLegend">Result</legend>
+        <p id="result-paragraph" class="paraResult"><i>*Result will generate here.</i></p>
+      </fieldset>
+    </section>
+
+    <section>
+      <fieldset class="paragraphFieldset">
+        <legend class="paragraphLegend">The original monologue</legend>
+        <p class="paraResult">
+          &ldquo;My name is Yoshikage Kira. I&apos;m 33 years old.
+          My house is in the northeast section of Morioh, where all the villas are, and I am not married.
+          I work as an employee for the Kame Yu department stores, and I get home every day by 8 PM at the latest.
+          I don&apos;t smoke, but I occasionally drink.
+          I&apos;m in bed by 11 PM, and make sure I get eight hours of sleep, no matter what.
+          After having a glass of warm milk and doing about twenty minutes of stretches before going to bed,
+          I usually have no problems sleeping until morning.
+          Just like a baby, I wake up without any fatigue or stress in the morning.
+          I was told there were no issues at my last check-up.
+          I&apos;m trying to explain that I&apos;m a person who wishes to live a very quiet life.
+          I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night.
+          That is how I deal with society, and I know that is what brings me happiness.
+          Although, if I were to fight, I wouldn&apos;t lose to anyone.&rdquo;
+        </p>
+        <hr>
+        <figure>
+          <img class="yoshikagekiraimg" src="./image/Yoshikage_Kira_FullBody_Posing_with_Stand.png"/>
+        </figure>
+      </fieldset>
+    </section>
+  </main>
+  <br>
+  <hr>
+  <footer>
+    <small>© 2025 Quiet Life Generator. All rights reserved.</small> <br>
+    <small>This is a fan-made project. JoJo's Bizarre Adventure is copyrighted by Hirohiko Araki and Shueisha.</small>
+  </footer>
+</body>
+</html>
