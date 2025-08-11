@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="God Donating Simulator">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God Donating Simulator</title>
+    <link rel="icon" type="image/png" href="./image/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>God Donating Simulator</h1>
+    </header>
+    <main>
+        <div class="image-container">
+            <img src="./image/god.gif" alt="God Image" />
+        </div>
+        <div class="donation-container">
+            <img src="./image/coin.png" alt="Coin Image" class="coin-image" />
+            <span id="donation-amount"></span>
+        </div>
+        <div class="button-container">
+            <input type="text" id="name-input" placeholder="Enter your name (optional)" />
+            <input type="text" id="donation-input" placeholder="Enter donation amount (in VND)" />
+            <button id="donate-button">Donate</button>
+            <button id="pray-button">Pray</button>
+            <button>Do nothing</button>
+        </div>
+        <div class="message-container">
+            <p id="donation-message" style="display: none;"><span id="donator-name"></span> donated <span
+                    id="donation-amount-display"></span>
+                to God.</p>
+            </p>
+            <p id="prayer-message" style="display: none;">You have prayed for blessings.</p>
+        </div>
+    </main>
+</body>
+
+</html>

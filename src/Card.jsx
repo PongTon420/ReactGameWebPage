@@ -1,12 +1,12 @@
 
 
-function Card()
-{
-    return(
+function Card(props) {
+    return (
         <div className="card">
-            <a target="_blank" href="/projects/yoshikage-kira-introduction-monologue-generator/index.html"><img src="/projects/yoshikage-kira-introduction-monologue-generator/image/Yoshikage_Kira_FullBody_Posing_with_Stand.png" alt="test"></img></a>
-            <a><h2>Yoshikage Kira&rsquo;s Iconic Monologue Generator</h2></a>
-            <a><p>Generate monologues that are funny, customized, or random.</p></a>
+            <a target="_blank" href={props.href}>
+                <img src={props.src} alt={props.alt}></img></a>
+            <a><h2>{props.title}</h2></a>
+            <p>{props.description}</p>
         </div>
     );
 }

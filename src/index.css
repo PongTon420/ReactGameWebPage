@@ -1,5 +1,10 @@
-.card
-{
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
   border: 1px solid black;
   border-radius: 10px;
   box-shadow: 5px 5px 5px black;
@@ -7,12 +12,35 @@
   margin: 20px;
   text-align: center;
   display: inline-block;
-  max-width: 200px;
-  max-height: auto;
+  width: 220px;
+  height: auto;
 }
-.card img
-{
-  max-width: 60%;
-  max-height: auto;
+
+.card img {
+  width: 200px;
+  height: 200px;
   margin-bottom: 10px;
+  padding: 10px;
+  object-fit: contain;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.card a {
+  text-decoration: none;
+  color: black;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  color: blue;
 }
